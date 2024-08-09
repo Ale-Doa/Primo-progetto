@@ -1,0 +1,30 @@
+$primary-color: rgb(255, 194, 61);
+$secondary-color: rgb(31, 31, 31);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "poiret one", Helvetica, sans-serif;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@import "_nav.scss";
+
+@import "_home-page.scss";
+
+@import "_projects.scss";
+
+@import "_about-me.scss";
+
+@import "_cv.scss";
+

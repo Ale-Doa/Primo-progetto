@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poiret one", Helvetica, sans-serif;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(255, 194, 61);
+  padding-bottom: 3px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 50%;
+}
+.menu li {
+  color: rgb(31, 31, 31);
+  background-color: rgb(255, 194, 61);
+  border-radius: 7px;
+  font-family: "comfortaa", Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.menu .first-child {
+  margin-left: 175px;
+}
+.menu li:hover {
+  text-decoration: underline;
+}
+
+.social .instagram {
+  width: 50px;
+  height: 50px;
+  margin-top: 3px;
+}
+.social .git {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 5px;
+}
+
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: rgb(31, 31, 31);
+}
+.home-page img {
+  width: 230px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.home-description {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  max-width: 650px;
+  border-right: 2px solid rgb(255, 194, 61);
+  height: 270px;
+  margin-right: 10px;
+  padding-right: 50px;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: none;
+}
+button:hover {
+  box-shadow: 0 0px 20px grey;
+  transition: box-shadow 0.2s;
+}
+
+.my-projects {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my-projects h2 {
+  margin-top: 20vh;
+  border-bottom: 2px solid rgb(255, 194, 61);
+  width: 600px;
+  text-align: center;
+  padding-bottom: 17px;
+  font-size: 35px;
+  margin-bottom: 70px;
+}
+
+.project {
+  font-family: "comfortaa", Helvetica, sans-serif;
+  box-shadow: 0 0px 10px gray;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: left;
+}
+.project img {
+  width: 200px;
+  height: auto;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.project-description-bold {
+  font-weight: 700;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.project-description {
+  max-width: 180px;
+  margin-left: 7px;
+  margin-bottom: 3px;
+}
+
+.about-me {
+  height: 100vh;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-me h2 {
+  margin-top: 20vh;
+  border-bottom: 2px solid rgb(255, 194, 61);
+  width: 550px;
+  text-align: center;
+  padding-bottom: 17px;
+  font-size: 35px;
+  margin-bottom: 70px;
+}
+.about-me p {
+  max-width: 700px;
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cv button {
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(255, 194, 61);
+  border-radius: 25px;
+  background-color: rgb(31, 31, 31);
+  color: rgb(255, 194, 61);
+  cursor: pointer;
+}
