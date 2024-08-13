@@ -18,12 +18,7 @@
                 <a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank"><li>Curriculum</li></a>
             </ul>
             
-            <button class="hamburger-menu">
-                <a href="#home-page" class="bar">Home</a>
-                <a href="#my-projects" class="bar">Projects</a>
-                <a href="#about-me" class="bar">About me</a>
-                <a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank" class="bar">Curriculum</a>
-            </button>
+            <button class="hamburger-menu"><img src="assets/img/hamburger-menu.PNG" alt="hamburger menu"></button>
             
             <div class="social">
                 <a href="https://www.instagram.com/alessandro_doati/" target="_blank"><img class="instagram" src="assets/img/instagram.png" alt="logo instagram"></a>
@@ -31,6 +26,13 @@
                 <a href="https://github.com/Ale-Doa" target="_blank"><img class="git" src="assets/img/GIT.png" alt="logo git"></a>
             </div>
         </nav>
+
+        <div class="mobile-menu">
+            <a href="#home-page">Home</a>
+            <a href="#my-projects">Projects</a>
+            <a href="#about-me">About me</a>
+            <a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank">Curriculum</a>
+        </div>
     </header>
 
     <div class="home-page scroll" id="home-page"> 
@@ -84,11 +86,6 @@
           $.scrollify({
             section : ".scroll",
           });
-        });
-
-        document.getElementById('hamburger-menu').addEventListener('click', function() {
-            const menu = document.getElementById('menu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
         });
     </script> 
 </body>
