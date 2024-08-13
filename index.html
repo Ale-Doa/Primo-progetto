@@ -17,7 +17,14 @@
                 <a href="#about-me"><li>About me</li></a>
                 <a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank"><li>Curriculum</li></a>
             </ul>
-
+            
+            <button class="hamburger-menu">
+                <a href="#home-page" class="bar">Home</a>
+                <a href="#my-projects" class="bar">Projects</a>
+                <a href="#about-me" class="bar">About me</a>
+                <a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank" class="bar">Curriculum</a>
+            </button>
+            
             <div class="social">
                 <a href="https://www.instagram.com/alessandro_doati/" target="_blank"><img class="instagram" src="assets/img/instagram.png" alt="logo instagram"></a>
 
@@ -35,7 +42,7 @@
     </div>
 
     <div class="my-projects scroll" id="my-projects">
-        <h2>MY - PROJECTS</h2>
+        <h2>MY PROJECTS</h2>
         
         <a href="assets/other/DnA/Index.html" target="_blank">
         <button class="project">
@@ -77,6 +84,11 @@
           $.scrollify({
             section : ".scroll",
           });
+        });
+
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
         });
     </script> 
 </body>
