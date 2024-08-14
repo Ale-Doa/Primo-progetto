@@ -134,21 +134,29 @@
         })
 
         $(function () {
+            let resizeTimeout;
+
             function toggleScrollify() {
                 if (window.matchMedia("(max-width: 320px)").matches) {
+
                     $.scrollify.destroy();
 
                     $("html, body").css({
                         "overflow": "hidden",
-                        "height": "100vh" 
+                        "height": "100vh"
                     });
 
-                   
-                    $(".scroll").css({
-                        "overflow": "auto", 
-                        "height": "100vh" 
+                    $(".about-me").css({
+                        "overflow-y": "auto",
+                        "height": "100vh"
+                    });
+
+                    $(".scroll").not(".about-me").css({
+                        "overflow-y": "auto",
+                        "height": "100vh"
                     });
                 } else {
+
                     $.scrollify({
                         section: ".scroll",
                     });
@@ -159,8 +167,8 @@
                     });
 
                     $(".scroll").css({
-                        "overflow": "hidden", 
-                        "height": "auto" 
+                        "overflow-y": "hidden",
+                        "height": "auto"
                     });
                 }
             }
@@ -168,7 +176,10 @@
             toggleScrollify();
 
             $(window).on("resize", function () {
-                toggleScrollify();
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function () {
+                    toggleScrollify();
+                }, 100); 
             });
         });
 
