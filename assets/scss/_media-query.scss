@@ -8,19 +8,45 @@
     display: none;
   }
 
+  button:hover {
+    box-shadow: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-title {
+    display: block;
+  }
+
+  .home-button {
+    display: block;
+    height: 22px;
+    width: 22px;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    background-color: $primary-color;
+
+    img {
+      height: 22px;
+      width: 22px;
+    }
+  }
+
   .hamburger-menu {
     display: block;
-    position: fixed;
-    top: 20px;
-    left: 20px;
     cursor: pointer;
 
     img {
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
       position: fixed;
-      top: 20px;
-      left: 20px;
+      top: 10px;
+      right: 10px;
     }
   }
 
@@ -51,38 +77,53 @@
     }
   }
 
-  .menu {
+  .home-page {
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      order: 1;
+
+      border-bottom: solid $primary-color 1px;
+      padding-bottom: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 200px;
+      width: auto;
+    }
+
+    .home-description {
+      order: 2;
+
+      border: none;
+      text-align: center;
+      margin: 0 auto;
+      padding-right: 0;
+      max-width: 90%;
+    }
   }
 
-  .menu li {
-    margin: 5px 0;
+  .my-projects {
+    h2 {
+      width: 250px;
+      padding-bottom: 15px;
+    }
   }
 
-  .home-description {
-    flex-direction: column;
-    text-align: center;
-    border-right: none;
-    padding-right: 0;
+  .about-me {
+    h2 {
+      width: 250px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      max-width: 90%;
+    }
   }
 
-  .home-page img {
-    width: 100%;
-    height: auto;
-  }
-
-  .my-projects h2,
-  .about-me h2 {
-    width: 90%;
-  }
-
-  .project img {
-    width: 100%;
-  }
-
-  .project-description,
-  .project-description-bold {
-    max-width: 100%;
+  .cv {
+    display: none;
   }
 }

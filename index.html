@@ -29,8 +29,13 @@
                 </a>
             </ul>
 
-            <button class="hamburger-menu" id="hamburger-menu"><img src="assets/img/hamburger-menu.PNG"
+            <button class="hamburger-menu" id="hamburger-menu"><img src="assets/img/hamburger-menu.png"
                     alt="hamburger menu"></button>
+
+            <button class="home-button"><a href="#home-page"><img src="assets/img/home-button.png"
+                        alt="pulsante home"></a></button>
+
+            <h1 class="mobile-title">My Portfolio</h1>
 
             <div class="social">
                 <a href="https://www.instagram.com/alessandro_doati/" target="_blank"><img class="instagram"
@@ -119,14 +124,61 @@
             if (menu.style.display === "none" || menu.style.display === "") {
                 menu.style.display = "flex";
             } else {
-                menu.style.display = "none"; 
+                menu.style.display = "none";
             }
         };
 
-        menu.addEventListener("click", function(event) {
+        menu.addEventListener("click", function (event) {
             event.stopPropagation();
             menu.style.display = "none";
         })
+
+        $(function () {
+            function toggleScrollify() {
+                if (window.matchMedia("(max-width: 320px)").matches) {
+                    // Disabilita Scrollify su schermi piccoli
+                    $.scrollify.destroy();
+
+                    // Imposta overflow hidden per il body per impedire scrolling
+                    $("html, body").css({
+                        "overflow": "hidden",
+                        "height": "100vh" // Garantisce che il body non si estenda oltre l'altezza dello schermo
+                    });
+
+                    // Mantieni la visibilità delle sezioni e evita il disallineamento
+                    $(".scroll").css({
+                        "overflow": "auto", // Permette lo scrolling interno se necessario
+                        "height": "100vh" // Assicura che le sezioni riempiano l'altezza dello schermo
+                    });
+                } else {
+                    // Abilita Scrollify su schermi più grandi
+                    $.scrollify({
+                        section: ".scroll",
+                    });
+
+                    // Ripristina le proprietà di overflow per body
+                    $("html, body").css({
+                        "overflow": "auto",
+                        "height": "auto"
+                    });
+
+                    // Ripristina le proprietà di overflow per le sezioni
+                    $(".scroll").css({
+                        "overflow": "hidden", // Impedisce lo scrolling interno
+                        "height": "auto" // Consente che le sezioni crescano in base al contenuto
+                    });
+                }
+            }
+
+            // Esegui il controllo all'avvio
+            toggleScrollify();
+
+            // Esegui il controllo al ridimensionamento della finestra
+            $(window).on("resize", function () {
+                toggleScrollify();
+            });
+        });
+
     </script>
 </body>
 

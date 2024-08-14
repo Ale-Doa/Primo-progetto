@@ -22,6 +22,14 @@ a {
   display: none;
 }
 
+.mobile-title {
+  display: none;
+}
+
+.home-button {
+  display: none;
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -191,19 +199,40 @@ button:hover {
   .menu {
     display: none;
   }
+  button:hover {
+    box-shadow: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-title {
+    display: block;
+  }
+  .home-button {
+    display: block;
+    height: 22px;
+    width: 22px;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    background-color: rgb(255, 194, 61);
+  }
+  .home-button img {
+    height: 22px;
+    width: 22px;
+  }
   .hamburger-menu {
     display: block;
-    position: fixed;
-    top: 20px;
-    left: 20px;
     cursor: pointer;
   }
   .hamburger-menu img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    right: 10px;
   }
   .mobile-menu {
     position: fixed;
@@ -228,32 +257,41 @@ button:hover {
     text-decoration: underline;
     text-decoration-color: rgb(255, 194, 61);
   }
-  .menu {
+  .home-page {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-  }
-  .menu li {
-    margin: 5px 0;
-  }
-  .home-description {
-    flex-direction: column;
-    text-align: center;
-    border-right: none;
-    padding-right: 0;
+    justify-content: center;
+    align-items: center;
   }
   .home-page img {
-    width: 100%;
-    height: auto;
+    order: 1;
+    border-bottom: solid rgb(255, 194, 61) 1px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 200px;
+    width: auto;
   }
-  .my-projects h2,
+  .home-page .home-description {
+    order: 2;
+    border: none;
+    text-align: center;
+    margin: 0 auto;
+    padding-right: 0;
+    max-width: 90%;
+  }
+  .my-projects h2 {
+    width: 250px;
+    padding-bottom: 15px;
+  }
   .about-me h2 {
-    width: 90%;
+    width: 250px;
+    margin-bottom: 40px;
   }
-  .project img {
-    width: 100%;
+  .about-me p {
+    max-width: 90%;
   }
-  .project-description,
-  .project-description-bold {
-    max-width: 100%;
+  .cv {
+    display: none;
   }
 }
