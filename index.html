@@ -136,44 +136,37 @@
         $(function () {
             function toggleScrollify() {
                 if (window.matchMedia("(max-width: 320px)").matches) {
-                    // Disabilita Scrollify su schermi piccoli
                     $.scrollify.destroy();
 
-                    // Imposta overflow hidden per il body per impedire scrolling
                     $("html, body").css({
                         "overflow": "hidden",
-                        "height": "100vh" // Garantisce che il body non si estenda oltre l'altezza dello schermo
+                        "height": "100vh" 
                     });
 
-                    // Mantieni la visibilità delle sezioni e evita il disallineamento
+                   
                     $(".scroll").css({
-                        "overflow": "auto", // Permette lo scrolling interno se necessario
-                        "height": "100vh" // Assicura che le sezioni riempiano l'altezza dello schermo
+                        "overflow": "auto", 
+                        "height": "100vh" 
                     });
                 } else {
-                    // Abilita Scrollify su schermi più grandi
                     $.scrollify({
                         section: ".scroll",
                     });
 
-                    // Ripristina le proprietà di overflow per body
                     $("html, body").css({
                         "overflow": "auto",
                         "height": "auto"
                     });
 
-                    // Ripristina le proprietà di overflow per le sezioni
                     $(".scroll").css({
-                        "overflow": "hidden", // Impedisce lo scrolling interno
-                        "height": "auto" // Consente che le sezioni crescano in base al contenuto
+                        "overflow": "hidden", 
+                        "height": "auto" 
                     });
                 }
             }
 
-            // Esegui il controllo all'avvio
             toggleScrollify();
 
-            // Esegui il controllo al ridimensionamento della finestra
             $(window).on("resize", function () {
                 toggleScrollify();
             });
