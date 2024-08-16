@@ -111,22 +111,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
 
     <script>
-        $(function () {
-            // Controlla la larghezza dello schermo
-            if (window.innerWidth > 500) {
+        function handleScrollify() {
+            // Verifica la larghezza dello schermo e l'orientamento
+            if (window.innerWidth <= 500 || window.matchMedia("(orientation: portrait)").matches) {
+                $.scrollify.destroy();  // Disabilita Scrollify
+            } else {
                 $.scrollify({
                     section: ".scroll",
-                });
-            } else {
-                $.scrollify.destroy();
+                });  // Abilita Scrollify
             }
-        });
+        }
 
-        // Disattiva Scrollify quando la finestra viene ridimensionata e scende sotto i 500px
-        $(window).resize(function () {
-            if (window.innerWidth <= 500) {
-                $.scrollify.destroy();
-            }
+        $(function () {
+            handleScrollify();  // Applica la logica al caricamento della pagina
+
+            // Gestisci il ridimensionamento della finestra
+            $(window).resize(handleScrollify);
+
+            // Gestisci il cambio di orientamento
+            window.addEventListener("orientationchange", handleScrollify);
+
+            window.addEventListener("load", handleScrollify);
         });
 
         const hamburgerMenu = document.getElementById("hamburger-menu");
