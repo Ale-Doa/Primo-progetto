@@ -123,6 +123,8 @@
   }
 
   .about-me {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+
     h2 {
       width: 250px;
       margin-bottom: 40px;
