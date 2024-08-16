@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doati Alessandro | Portfolio</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="script" href="/assets/script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poiret+One&display=swap"
@@ -110,9 +112,21 @@
 
     <script>
         $(function () {
-            $.scrollify({
-                section: ".scroll",
-            });
+            // Controlla la larghezza dello schermo
+            if (window.innerWidth > 500) {
+                $.scrollify({
+                    section: ".scroll",
+                });
+            } else {
+                $.scrollify.destroy();
+            }
+        });
+
+        // Disattiva Scrollify quando la finestra viene ridimensionata e scende sotto i 500px
+        $(window).resize(function () {
+            if (window.innerWidth <= 500) {
+                $.scrollify.destroy();
+            }
         });
 
         const hamburgerMenu = document.getElementById("hamburger-menu");
@@ -132,57 +146,6 @@
             event.stopPropagation();
             menu.style.display = "none";
         })
-
-        $(function () {
-            let resizeTimeout;
-
-            function toggleScrollify() {
-                if (window.matchMedia("(max-width: 320px)").matches) {
-
-                    $.scrollify.destroy();
-
-                    $("html, body").css({
-                        "overflow": "hidden",
-                        "height": "100vh"
-                    });
-
-                    $(".about-me").css({
-                        "overflow-y": "auto",
-                        "height": "100vh"
-                    });
-
-                    $(".scroll").not(".about-me").css({
-                        "overflow-y": "auto",
-                        "height": "100vh"
-                    });
-                } else {
-
-                    $.scrollify({
-                        section: ".scroll",
-                    });
-
-                    $("html, body").css({
-                        "overflow": "auto",
-                        "height": "auto"
-                    });
-
-                    $(".scroll").css({
-                        "overflow-y": "hidden",
-                        "height": "auto"
-                    });
-                }
-            }
-
-            toggleScrollify();
-
-            $(window).on("resize", function () {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(function () {
-                    toggleScrollify();
-                }, 100); 
-            });
-        });
-
     </script>
 </body>
 

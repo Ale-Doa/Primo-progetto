@@ -195,7 +195,15 @@ button:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 320px) {
+@media only screen and (max-width: 500px) {
+  body {
+    overflow: hidden;
+  }
+  .scroll {
+    overflow: auto;
+    height: 100vh;
+    max-height: 100vh;
+  }
   .social {
     display: none;
   }
@@ -250,8 +258,8 @@ button:hover {
     height: 100%;
     background: rgba(31, 31, 31, 0.9);
     color: white;
-    padding-top: 160px;
-    padding-bottom: 270px;
+    padding-top: 24vh;
+    padding-bottom: 40vh;
     text-decoration: underline;
     text-underline-offset: 4px;
   }
@@ -290,6 +298,7 @@ button:hover {
   .about-me h2 {
     width: 250px;
     margin-bottom: 40px;
+    margin-top: 15vh;
   }
   .about-me p {
     max-width: 90%;
