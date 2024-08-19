@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poiret+One&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("7w7dZ0RkBA2XleF4V"); 
+    </script>
 </head>
 
 <body>
@@ -25,6 +29,9 @@
                 </a>
                 <a href="#about-me">
                     <li>About me</li>
+                </a>
+                <a href="#contacts">
+                    <li>Contacts</li>
                 </a>
                 <a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank">
                     <li>Curriculum</li>
@@ -52,59 +59,97 @@
             <a href="#home-page">Home</a>
             <a href="#my-projects">Projects</a>
             <a href="#about-me">About me</a>
+            <a href="#contacts">Contacts</a>
             <a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank">Curriculum</a>
         </div>
     </header>
 
-    <div class="home-page scroll" id="home-page">
-        <div class="home-description">
-            <p>Ciao, mi chiamo Alessandro Doati, classe 2002, sono appassionato di videogiochi, sport e fumetti.
-                Attualmente studiuo per diventare web developer</p>
+    <main>
+        <div class="home-page scroll" id="home-page">
+            <div class="home-description">
+                <p>Ciao, mi chiamo Alessandro Doati, classe 2002, sono appassionato di videogiochi, sport e fumetti.
+                    Attualmente studiuo per diventare web developer</p>
+            </div>
+
+            <img src="assets/img/foto-home.jpg" alt="foto del proprietario del sito">
         </div>
 
-        <img src="assets/img/foto-home.jpg" alt="foto del proprietario del sito">
-    </div>
+        <div class="my-projects scroll" id="my-projects">
+            <h2>MY PROJECTS</h2>
 
-    <div class="my-projects scroll" id="my-projects">
-        <h2>MY PROJECTS</h2>
+            <a href="assets/other/DnA/Index.html" target="_blank">
+                <button class="project">
+                    <img src="assets/img/progetto-dna.jpg" alt="scienziato in camice">
 
-        <a href="assets/other/DnA/Index.html" target="_blank">
-            <button class="project">
-                <img src="assets/img/progetto-dna.jpg" alt="scienziato in camice">
+                    <div class="project-description-bold">
+                        DnA
+                    </div>
 
-                <div class="project-description-bold">
-                    DnA
-                </div>
-
-                <div class="project-description">
-                    Rivista scientifica emergente
-                </div>
-            </button>
-        </a>
-    </div>
-
-    <div class="about-me scroll" id="about-me">
-        <h2>ABOUT ME</h2>
-
-        <p>Ciao, come detto in home page mi chiamo Alessandro Doati, mi piacciono i fumetti, lo sport, i vidieogiochi e
-            anche film e serie tv, soprattutto quelle animate.</p>
-
-        <p>Se dobbiamo parlare della mia cariera scolastica allora direi che ho frequentato l'istituto otecnico, dove ho
-            studiato elettronica. E come step più recente ho deciso di seguire un master in Start2Impact per diventare
-            full stack developer.</p>
-
-        <p>Se invece dobbiamo parlare della mia cariera lavorativa allora direi che dopo il diploma ho lavorato un po'
-            come cameriere a chiamata in un bar della mia zona, poi ho lavorato nell'ufficio amministrazione di una
-            ditta di beverage a qualche minuto da casa mia, e come ultima esperienza ho lavorato come magazziniere in
-            amazon</p>
-
-        <p>Penso che come infarinatura sul mio conto possa bastare. Per maggiori informazioni é possibile consultare il
-            mio Curriculum</p>
-
-        <div class="cv">
-            <button><a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank">CV</a></button>
+                    <div class="project-description">
+                        Rivista scientifica emergente
+                    </div>
+                </button>
+            </a>
         </div>
-    </div>
+
+        <div class="about-me scroll" id="about-me">
+            <h2>ABOUT ME</h2>
+
+            <p>Ciao, come detto in home page mi chiamo Alessandro Doati, mi piacciono i fumetti, lo sport, i
+                vidieogiochi e
+                anche film e serie tv, soprattutto quelle animate.</p>
+
+            <p>Se dobbiamo parlare della mia cariera scolastica allora direi che ho frequentato l'istituto otecnico,
+                dove ho
+                studiato elettronica. E come step più recente ho deciso di seguire un master in Start2Impact per
+                diventare
+                full stack developer.</p>
+
+            <p>Se invece dobbiamo parlare della mia cariera lavorativa allora direi che dopo il diploma ho lavorato un
+                po'
+                come cameriere a chiamata in un bar della mia zona, poi ho lavorato nell'ufficio amministrazione di una
+                ditta di beverage a qualche minuto da casa mia, e come ultima esperienza ho lavorato come magazziniere
+                in
+                amazon</p>
+
+            <p>Penso che come infarinatura sul mio conto possa bastare. Per maggiori informazioni é possibile consultare
+                il
+                mio Curriculum</p>
+
+            <div class="cv">
+                <button><a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank">CV</a></button>
+            </div>
+        </div>
+
+        <div class="contacts scroll" id="contacts">
+            <form id="my-form">
+                <div class="form">
+                    <div class="user-info">
+                        <div class="name">
+                            <label for="name">Nome:</label> <br>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="surname">
+                            <label for="surname">Surname:</label> <br>
+                            <input type="text" id="surname" name="surname" required>
+                        </div>
+                    </div>
+
+                    <div class="mail">
+                        <label for="email">Mail:</label> <br>
+                        <input type="email" id="email" name="mail" required>
+                    </div>
+
+                    <div class="message">
+                        <label for="message">Message:</label> <br>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -151,6 +196,17 @@
             event.stopPropagation();
             menu.style.display = "none";
         })
+
+        document.getElementById('my-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impedisce l'invio predefinito del form
+
+            emailjs.sendForm('service_portfolio', 'template_portfolio', this)
+                .then(function(response) {
+                    alert('Messaggio inviato con successo!', response);
+                }, function(error) {
+                    alert('Errore nel l\'invio del messaggio:', error);
+                });
+        });
     </script>
 </body>
 

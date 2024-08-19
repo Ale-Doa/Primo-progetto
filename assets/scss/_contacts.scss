@@ -1,0 +1,42 @@
+.contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 450px;
+    font-weight: bolder;
+
+    button {
+        padding: 20px;
+        margin-top: 12px;
+        background-color: $primary-color;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mail {
+    margin-top: 12px;
+
+    input {
+        width: 100%;
+    }
+}
+
+.message {
+    margin-top: 12px;
+
+    textarea {
+        width: 100%;
+        min-height: 100px;
+    }
+}

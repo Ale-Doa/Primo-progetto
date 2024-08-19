@@ -331,3 +331,42 @@ button:hover {
     padding-right: 45px;
   }
 }
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 450px;
+  font-weight: bolder;
+}
+.form button {
+  padding: 20px;
+  margin-top: 12px;
+  background-color: rgb(255, 194, 61);
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mail {
+  margin-top: 12px;
+}
+.mail input {
+  width: 100%;
+}
+
+.message {
+  margin-top: 12px;
+}
+.message textarea {
+  width: 100%;
+  min-height: 100px;
+}
