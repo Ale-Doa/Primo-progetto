@@ -98,39 +98,44 @@
             <div class="about-me-0">
                 <div class="about-me-1">
                     <img src="assets/img/foto-home.jpg" alt="foto proprietario del sito">
-    
+
                     <div class="about-me-p">
                         <p>
                             About me
                             Mi chiamo Alessandro, ho 22 anni e sono un perito elettronico con una forte passione per la
-                            programmazione. Negli ultimi anni, ho deciso di trasformare questa passione in una professione,
+                            programmazione. Negli ultimi anni, ho deciso di trasformare questa passione in una
+                            professione,
                             iniziando un percorso <br> di formazione presso Start2Impact per diventare un web developer.
                         </p>
-    
+
                         <p>
-                            Sono una persona ambiziosa, sempre alla ricerca di nuovi stimoli, <br> che spesso trovo nei fumetti,
+                            Sono una persona ambiziosa, sempre alla ricerca di nuovi stimoli, <br> che spesso trovo nei
+                            fumetti,
                             negli
                             anime, nei videogiochi e nello sport. Queste passioni non solo arricchiscono la mia vita
                             personale, <br> ma mi offrono anche ispirazione e creatività nel mio lavoro.
-                        </p>         
-                        
+                        </p>
+
                         <p>
-                            Per saperne di più su di me: <button class="cv"><a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank">CV</a></button>
+                            Per saperne di più su di me: <button class="cv"><a
+                                    href="assets/other/CV-Doati-Alessandro.pdf" target="_blank">CV</a></button>
                         </p>
                     </div>
                 </div>
-    
+
                 <div class="about-me-2">
                     <h3>Skills</h3>
-    
-                    <img src="assets/img/html.png" alt="logo html">
-                    <img src="assets/img/css.png" alt="logo css">
-                    <img src="assets/img/sass.png" alt="logo sass">
-                    <img src="assets/img/javascript.png" alt="logo javascript">
-                    <img src="assets/img/figma.png" alt="logo figma">
-                    <img src="assets/img/git.png" alt="logo github">
+
+                    <div class="about-me-2-img">
+                        <img src="assets/img/html.png" alt="logo html">
+                        <img src="assets/img/css.png" alt="logo css">
+                        <img src="assets/img/sass.png" alt="logo sass">
+                        <img src="assets/img/javascript.png" alt="logo javascript">
+                        <img src="assets/img/figma.png" alt="logo figma">
+                        <img src="assets/img/git.png" alt="logo github">
+                    </div>
                 </div>
-            </div>    
+            </div>
         </section>
 
         <section class="contacts scroll" id="contacts">
@@ -170,29 +175,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
 
     <script>
-        function handleScrollify() {
-            // Verifica la larghezza dello schermo e l'orientamento
-            if (window.innerWidth <= 500 || window.matchMedia("(orientation: portrait)").matches) {
-                $.scrollify.destroy();  // Disabilita Scrollify
-            } else {
-                $.scrollify({
-                    section: ".scroll",
-                });  // Abilita Scrollify
-            }
-        }
-
-        $(function () {
-            handleScrollify();  // Applica la logica al caricamento della pagina
-
-            // Gestisci il ridimensionamento della finestra
-            $(window).resize(handleScrollify);
-
-            // Gestisci il cambio di orientamento
-            window.addEventListener("orientationchange", handleScrollify);
-
-            window.addEventListener("load", handleScrollify);
+        $(function() {
+          $.scrollify({
+            section : ".scroll",
+          });
         });
-
+        
         const hamburgerMenu = document.getElementById("hamburger-menu");
         const menu = document.querySelector(".mobile-menu");
 
@@ -212,7 +200,7 @@
         })
 
         document.getElementById('my-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Impedisce l'invio predefinito del form
+            event.preventDefault(); 
 
             emailjs.sendForm('service_portfolio', 'template_portfolio', this)
                 .then(function (response) {

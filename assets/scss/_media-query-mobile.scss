@@ -1,13 +1,12 @@
-@media (max-width: 500px), (orientation: portrait) {
+@media (max-width: 500px),
+(orientation: portrait) {
 
   body {
     overflow: hidden;
   }
-  
+
   .scroll {
     overflow: auto;
-    height: 100vh;
-    max-height: 100vh;
   }
 
   .social {
@@ -125,10 +124,11 @@
   .about-me {
     padding-bottom: calc(50px + env(safe-area-inset-bottom));
     flex-direction: column;
+    height: auto;
 
     h2 {
       width: 250px;
-      margin-top: 20vh;
+      margin-top: 15vh;
       margin-bottom: 20px;
     }
 
@@ -136,30 +136,41 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      max-width: 100%;
     }
 
     .about-me-1 {
       flex-direction: column;
       max-width: 90%;
-      margin-bottom: 50px;
+      margin-bottom: 20px;
 
       img {
         margin: 0;
         margin-bottom: 40px;
       }
 
-      p {
-        text-align: center;
+      .about-me-p {
+        text-align: left;
+        margin: 0;
+        height: auto;
       }
     }
 
     .about-me-2 {
-        flex-direction: column;
-        margin-top: auto;
+      flex-direction: column;
+      margin: 0;
 
-        h3 {
-          margin-bottom: 20px;
-        }
+      h3 {
+        margin-bottom: 20px;
+      }
+
+      .about-me-2-img {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+      }
     }
   }
 
