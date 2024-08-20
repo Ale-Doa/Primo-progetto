@@ -2,11 +2,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom: 150px;
+        border-bottom: 2px solid $primary-color;
+        padding-bottom: 17px;
+        width: 320px;
+        text-align: center;
+    }
 }
 
 .form {
     width: 450px;
     font-weight: bolder;
+    margin-bottom: 100px;
 
     button {
         padding: 20px;

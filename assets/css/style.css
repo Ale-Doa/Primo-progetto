@@ -310,7 +310,11 @@ button:hover {
     display: none;
   }
 }
-@media screen and (min-width: 671px) and (max-width: 1100px) {
+.form {
+  max-width: 350px;
+}
+
+@media screen and (min-width: 671px) and (max-width: 1200px) {
   .menu {
     width: 70%;
   }
@@ -335,11 +339,20 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.contacts h1 {
+  margin-bottom: 150px;
+  border-bottom: 2px solid rgb(255, 194, 61);
+  padding-bottom: 17px;
+  width: 320px;
+  text-align: center;
 }
 
 .form {
   width: 450px;
   font-weight: bolder;
+  margin-bottom: 100px;
 }
 .form button {
   padding: 20px;
