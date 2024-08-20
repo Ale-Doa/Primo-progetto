@@ -1,13 +1,13 @@
 .about-me {
-    height: 100vh;
+    min-height: 100vh;
     background-color: $secondary-color;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     h2 {
-        margin-top: 20vh;
         border-bottom: 2px solid $primary-color;
         width: 550px;
         text-align: center;
@@ -20,6 +20,51 @@
         max-width: 700px;
         font-size: 22px;
         margin-bottom: 30px;
-        text-align: center;
+        text-align: left;
+    }
+}
+
+.about-me-0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 300px;
+        width: auto;
+        border-radius: 3px;
+        margin-right: 25px;
+    }
+}
+
+.about-me-p {
+    display: flex;
+    flex-direction: column;
+    height: 300px; 
+    margin-left: 40px;
+}
+
+.about-me-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+    width: 100%;
+
+    img {
+        height: 70px;
+        width: auto;
+    }
+
+    h3 {
+        font-size: 40px;
     }
 }
