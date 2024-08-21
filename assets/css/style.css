@@ -240,12 +240,6 @@ button:hover {
 }
 
 @media (max-width: 500px), (orientation: portrait) {
-  body {
-    overflow: hidden;
-  }
-  .scroll {
-    overflow: auto;
-  }
   .social {
     display: none;
   }
@@ -311,6 +305,7 @@ button:hover {
     text-decoration-color: rgb(255, 194, 61);
   }
   .home-page {
+    background-color: rgb(241, 241, 241);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -327,22 +322,30 @@ button:hover {
   }
   .home-page .home-description {
     order: 2;
+    color: rgb(31, 31, 31);
+    font-weight: bold;
     border: none;
     text-align: center;
     margin: 0 auto;
     padding-right: 0;
     max-width: 90%;
   }
+  .my-projects {
+    background-color: rgb(241, 241, 241);
+  }
   .my-projects h2 {
     width: 250px;
     padding-bottom: 15px;
+    margin-top: 50px;
   }
   .about-me {
+    background-color: rgb(241, 241, 241);
     padding-bottom: calc(50px + env(safe-area-inset-bottom));
     flex-direction: column;
     height: auto;
   }
   .about-me h2 {
+    color: rgb(31, 31, 31);
     width: 250px;
     margin-top: 15vh;
     margin-bottom: 20px;
@@ -363,9 +366,15 @@ button:hover {
     margin-bottom: 40px;
   }
   .about-me .about-me-1 .about-me-p {
+    color: rgb(31, 31, 31);
+    font-weight: bold;
     text-align: left;
     margin: 0;
     height: auto;
+  }
+  .about-me .about-me-1 .about-me-p button {
+    background-color: rgb(241, 241, 241);
+    color: rgb(31, 31, 31);
   }
   .about-me .about-me-2 {
     flex-direction: column;
@@ -382,6 +391,10 @@ button:hover {
     justify-items: center;
   }
 }
+.contacts {
+  background-color: rgb(241, 241, 241);
+}
+
 .form {
   max-width: 350px;
 }

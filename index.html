@@ -101,7 +101,6 @@
 
                     <div class="about-me-p">
                         <p>
-                            About me
                             Mi chiamo Alessandro, ho 22 anni e sono un perito elettronico con una forte passione per la
                             programmazione. Negli ultimi anni, ho deciso di trasformare questa passione in una
                             professione,
@@ -175,12 +174,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
 
     <script>
-        $(function() {
-          $.scrollify({
-            section : ".scroll",
-          });
+        $(document).ready(function () {
+            // Funzione per inizializzare o distruggere Scrollify in base alle condizioni
+            function toggleScrollify() {
+                if (window.matchMedia("(max-width: 500px), (orientation: portrait)").matches) {
+                    // Se la condizione è soddisfatta, distruggi Scrollify
+                    if ($.scrollify.isEnabled()) {
+                        $.scrollify.destroy();
+                    }
+                } else {
+                    // Se la condizione non è soddisfatta, inizializza Scrollify
+                    $.scrollify({
+                        section: ".scroll",
+                    });
+                }
+            }
+
+            // Esegui il controllo iniziale
+            toggleScrollify();
+
+            // Aggiungi un listener per l'evento di ridimensionamento e cambiamento di orientamento
+            $(window).on("resize orientationchange", function () {
+                toggleScrollify();
+            });
         });
-        
+
         const hamburgerMenu = document.getElementById("hamburger-menu");
         const menu = document.querySelector(".mobile-menu");
 
@@ -200,7 +218,7 @@
         })
 
         document.getElementById('my-form').addEventListener('submit', function (event) {
-            event.preventDefault(); 
+            event.preventDefault();
 
             emailjs.sendForm('service_portfolio', 'template_portfolio', this)
                 .then(function (response) {
