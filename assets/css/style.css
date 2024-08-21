@@ -86,23 +86,26 @@ nav {
   margin: 0 auto;
   background-color: rgb(31, 31, 31);
 }
-.home-page img {
-  width: 230px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 2px;
-}
 
 .home-description {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
   color: white;
-  font-size: 25px;
-  max-width: 650px;
-  border-right: 2px solid rgb(255, 194, 61);
-  height: 270px;
-  margin-right: 10px;
-  padding-right: 50px;
+  max-width: 350px;
+}
+.home-description p {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.home-description h2 {
+  font-size: 50px;
+  border-bottom: 2px solid rgb(255, 194, 61);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.home-description .small-p {
+  font-size: 20px;
 }
 
 button {
@@ -117,11 +120,13 @@ button:hover {
 }
 
 .my-projects {
+  background-color: rgb(31, 31, 31);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .my-projects h2 {
+  color: white;
   margin-top: 20vh;
   border-bottom: 2px solid rgb(255, 194, 61);
   width: 600px;
@@ -159,8 +164,9 @@ button:hover {
 }
 
 .about-me {
-  background-color: rgb(31, 31, 31);
-  color: white;
+  background-color: white;
+  color: rgb(31, 31, 31);
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,14 +240,69 @@ button:hover {
   margin-left: 30px;
   border: 2px solid rgb(255, 194, 61);
   border-radius: 3px;
-  background-color: rgb(31, 31, 31);
-  color: rgb(255, 194, 61);
+  background-color: white;
+  color: rgb(31, 31, 31);
+  font-weight: bold;
   cursor: pointer;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+}
+.contacts h2 {
+  font-size: 35px;
+  margin-bottom: 150px;
+  border-bottom: 2px solid rgb(255, 194, 61);
+  padding-bottom: 17px;
+  width: 320px;
+  text-align: center;
+}
+
+.form {
+  width: 450px;
+  font-weight: bolder;
+  margin-bottom: 100px;
+}
+.form button {
+  padding: 20px;
+  margin-top: 12px;
+  background-color: rgb(255, 194, 61);
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mail {
+  margin-top: 12px;
+}
+.mail input {
+  width: 100%;
+}
+
+.message {
+  margin-top: 12px;
+}
+.message textarea {
+  width: 100%;
+  min-height: 100px;
 }
 
 @media (max-width: 500px), (orientation: portrait) {
   .social {
     display: none;
+  }
+  .scroll {
+    min-height: 100vh;
   }
   .menu {
     display: none;
@@ -325,15 +386,16 @@ button:hover {
     color: rgb(31, 31, 31);
     font-weight: bold;
     border: none;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     padding-right: 0;
-    max-width: 90%;
+    max-width: 80%;
   }
   .my-projects {
     background-color: rgb(241, 241, 241);
   }
   .my-projects h2 {
+    color: rgb(31, 31, 31);
     width: 250px;
     padding-bottom: 15px;
     margin-top: 50px;
@@ -347,7 +409,6 @@ button:hover {
   .about-me h2 {
     color: rgb(31, 31, 31);
     width: 250px;
-    margin-top: 15vh;
     margin-bottom: 20px;
   }
   .about-me .about-me-0 {
@@ -372,7 +433,7 @@ button:hover {
     margin: 0;
     height: auto;
   }
-  .about-me .about-me-1 .about-me-p button {
+  .about-me .about-me-1 .about-me-p o button {
     background-color: rgb(241, 241, 241);
     color: rgb(31, 31, 31);
   }
@@ -390,15 +451,13 @@ button:hover {
     align-items: center;
     justify-items: center;
   }
+  .contacts {
+    background-color: rgb(241, 241, 241);
+  }
+  .form {
+    max-width: 350px;
+  }
 }
-.contacts {
-  background-color: rgb(241, 241, 241);
-}
-
-.form {
-  max-width: 350px;
-}
-
 @media screen and (min-width: 671px) and (max-width: 1200px) {
   .menu {
     width: 70%;
@@ -419,52 +478,4 @@ button:hover {
     margin-right: 15px;
     padding-right: 45px;
   }
-}
-.contacts {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.contacts h1 {
-  margin-bottom: 150px;
-  border-bottom: 2px solid rgb(255, 194, 61);
-  padding-bottom: 17px;
-  width: 320px;
-  text-align: center;
-}
-
-.form {
-  width: 450px;
-  font-weight: bolder;
-  margin-bottom: 100px;
-}
-.form button {
-  padding: 20px;
-  margin-top: 12px;
-  background-color: rgb(255, 194, 61);
-  border-radius: 5px;
-  width: 100%;
-  font-size: 18px;
-}
-
-.user-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.mail {
-  margin-top: 12px;
-}
-.mail input {
-  width: 100%;
-}
-
-.message {
-  margin-top: 12px;
-}
-.message textarea {
-  width: 100%;
-  min-height: 100px;
 }

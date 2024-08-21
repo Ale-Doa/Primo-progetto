@@ -3,8 +3,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: white;
 
-    h1 {
+    h2 {
+        font-size: 35px;
         margin-bottom: 150px;
         border-bottom: 2px solid $primary-color;
         padding-bottom: 17px;
