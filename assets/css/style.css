@@ -431,6 +431,29 @@ footer p {
     text-decoration: underline;
     text-underline-offset: 4px;
   }
+  .mobile-menu .mobile-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 194, 61, 0.3);
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 80px;
+  }
+  .mobile-menu .mobile-social .instagram-mobile {
+    height: 40px;
+    width: auto;
+  }
+  .mobile-menu .mobile-social .git-mobile {
+    height: 40px;
+    width: auto;
+  }
+  .mobile-menu .mobile-social .linkedin-mobile {
+    height: 31px;
+    width: auto;
+    margin-right: 4px;
+  }
   .mobile-menu a:active {
     color: rgb(255, 194, 61);
     text-decoration: underline;
@@ -637,9 +660,32 @@ footer p {
     background: rgba(31, 31, 31, 0.9);
     color: white;
     padding-top: 24vh;
-    padding-bottom: 40vh;
+    padding-bottom: 30vh;
     text-decoration: underline;
     text-underline-offset: 4px;
+  }
+  .mobile-menu .mobile-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 194, 61, 0.3);
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 80px;
+  }
+  .mobile-menu .mobile-social .instagram-mobile {
+    height: 40px;
+    width: auto;
+  }
+  .mobile-menu .mobile-social .git-mobile {
+    height: 40px;
+    width: auto;
+  }
+  .mobile-menu .mobile-social .linkedin-mobile {
+    height: 31px;
+    width: auto;
+    margin-right: 4px;
   }
   .mobile-menu a:active {
     color: rgb(255, 194, 61);

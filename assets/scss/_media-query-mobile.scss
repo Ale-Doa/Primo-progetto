@@ -74,9 +74,36 @@
     background: rgb(31, 31, 31, 0.9);
     color: white;
     padding-top: 24vh;
-    padding-bottom: 40vh;
+    padding-bottom: 30vh;
     text-decoration: underline;
     text-underline-offset: 4px;
+
+    .mobile-social {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgb(255, 194, 61, 0.3);
+      border-radius: 5px;
+      width: 150px;
+      margin-top: 80px;
+
+      .instagram-mobile {
+        height: 40px;
+        width: auto;
+      }
+
+      .git-mobile {
+        height: 40px;
+        width: auto;
+      }
+
+      .linkedin-mobile {
+        height: 31px;
+        width: auto;
+        margin-right: 4px;
+      }
+    }
 
     a:active {
       color: $primary-color;
