@@ -1,5 +1,4 @@
-@media (max-width: 500px),
-(orientation: portrait) {
+@media (max-width: 500px) and (orientation: portrait){
 
   .right-section {
     display: none;
@@ -207,5 +206,22 @@
 
   .form {
     max-width: 350px;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+
+  .footer-list {
+    margin: 0;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 60%;
   }
 }
