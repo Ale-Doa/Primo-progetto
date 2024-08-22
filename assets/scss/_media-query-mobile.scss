@@ -120,7 +120,7 @@
       color: $secondary-color;
       width: 250px;
       padding-bottom: 15px;
-      margin-top: 50px;
+      margin-top: 90px;
     }
   }
 
@@ -133,7 +133,8 @@
     h2 {
       color: $secondary-color;
       width: 250px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      margin-top: 90px;
     }
 
     .about-me-0 {
@@ -170,6 +171,7 @@
     .about-me-2 {
       flex-direction: column;
       margin: 0;
+      padding-bottom: 40px;
 
       h3 {
         margin-bottom: 20px;
