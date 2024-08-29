@@ -327,8 +327,10 @@ footer {
   padding-left: 25%;
   padding-right: 25%;
 }
-footer li h3 {
+footer .footer-title {
   margin-bottom: 2px;
+  font-size: 20px;
+  font-weight: bold;
 }
 footer p {
   font-size: 18px;
