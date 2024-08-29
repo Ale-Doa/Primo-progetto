@@ -161,6 +161,7 @@ button:hover {
   border-radius: 3px;
   cursor: pointer;
   text-align: left;
+  background-color: whitesmoke;
 }
 .project img {
   width: 200px;

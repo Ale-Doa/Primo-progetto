@@ -22,28 +22,23 @@
     <header>
         <nav>
             <ul class="menu">
-                <a href="#home-page">
-                    <li class="first-child">Home</li>
-                </a>
-                <a href="#about-me">
-                    <li>About me</li>
-                </a>
-                <a href="#my-projects">
-                    <li>Projects</li>
-                </a>
-                <a href="#contacts">
-                    <li>Contacts</li>
-                </a>
-                <a href="assets/other/CV-Doati-Alessandro.pdf" target="_blank">
-                    <li>Curriculum</li>
-                </a>
+                <li class="first-child"><a href="#home-page">Home</a></li>
+
+                <li><a href="#about-me">About me</a></li>
+
+                <li><a href="#my-projects">Projects</a></li>
+
+                <li><a href="#contacts">Contacts</a></li>
+
+                <!-- Cambiare link una volta fatto il cv in html -->
+                <li><a href="assets/other/CV-Doati-Alessandro.pdf">Curriculum</a></li>
+
             </ul>
 
             <button class="hamburger-menu" id="hamburger-menu"><img src="assets/img/hamburger-menu.png"
                     alt="hamburger menu"></button>
 
-            <button class="home-button"><a href="#home-page"><img src="assets/img/home-button.png"
-                        alt="pulsante home"></a></button>
+            <a class="home-button" href="#home-page"><img src="assets/img/home-button.png" alt="pulsante home"></a>
 
             <h1 class="mobile-title">My Portfolio</h1>
         </nav>
@@ -59,11 +54,11 @@
                 <a href="https://www.instagram.com/alessandro_doati/" target="_blank"><img class="instagram-mobile"
                         src="assets/img/instagram.png" alt="logo instagram"></a>
 
-                <a href="https://github.com/Ale-Doa" target="_blank"><img class="git-mobile" src="assets/img/git-logo.png"
-                        alt="logo git"></a>
+                <a href="https://github.com/Ale-Doa" target="_blank"><img class="git-mobile"
+                        src="assets/img/git-logo.png" alt="logo git"></a>
 
-                <a href="https://www.linkedin.com/in/alessandro-doati-a15283251/" target="_blank"><img class="linkedin-mobile"
-                        src="assets/img/linkedin.png" alt="logo linkedin"></a>
+                <a href="https://www.linkedin.com/in/alessandro-doati-a15283251/" target="_blank"><img
+                        class="linkedin-mobile" src="assets/img/linkedin.png" alt="logo linkedin"></a>
             </div>
         </div>
     </header>
@@ -115,8 +110,8 @@
                         </p>
 
                         <p>
-                            Per saperne di più su di me: <button class="cv"><a
-                                    href="assets/other/CV-Doati-Alessandro.pdf" target="_blank">CV</a></button>
+                            Per saperne di più su di me: <a class="cv" href="assets/other/CV-Doati-Alessandro.pdf"
+                                target="_blank">CV</a>
                         </p>
                     </div>
                 </div>
@@ -139,18 +134,16 @@
         <section class="my-projects scroll" id="my-projects">
             <h2>MY PROJECTS</h2>
 
-            <a href="assets/other/DnA/Index.html" target="_blank">
-                <button class="project">
-                    <img src="assets/img/progetto-dna.jpg" alt="scienziato in camice">
+            <a class="project" href="assets/other/DnA/Index.html" target="_blank">
+                <img src="assets/img/progetto-dna.jpg" alt="scienziato in camice">
 
-                    <div class="project-description-bold">
-                        DnA
-                    </div>
+                <div class="project-description-bold">
+                    DnA
+                </div>
 
-                    <div class="project-description">
-                        Rivista scientifica emergente
-                    </div>
-                </button>
+                <div class="project-description">
+                    Rivista scientifica emergente
+                </div>
             </a>
         </section>
 
@@ -162,17 +155,17 @@
                     <div class="user-info">
                         <div class="name">
                             <label for="name">Nome:</label> <br>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" placeholder="Mario" id="name" name="name" required>
                         </div>
                         <div class="surname">
                             <label for="surname">Surname:</label> <br>
-                            <input type="text" id="surname" name="surname" required>
+                            <input type="text" placeholder="Rossi" id="surname" name="surname" required>
                         </div>
                     </div>
 
                     <div class="mail">
                         <label for="email">Mail:</label> <br>
-                        <input type="email" id="email" name="mail" required>
+                        <input type="email" placeholder="mario.rossi@gmail.com" id="email" name="mail" required>
                     </div>
 
                     <div class="message">
@@ -195,7 +188,7 @@
             <div class="footer-links">
                 <h3>Links</h3>
                 <ul>
-                    <li><a href="#home-page"></a>Home</li>
+                    <li><a href="#home-page">Home</a></li>
                     <li><a href="#about-me">About me</a></li>
                     <li><a href="#my-projects">Projects</a></li>
                     <li><a href="assets/other/CV-Doati-Alessandro.pdf">Curriculum</a></li>
