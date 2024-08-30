@@ -9,6 +9,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    h1 {
+        margin-right: 12%;
+        font-size: 35px;
+    }
 }
 
 .menu {
